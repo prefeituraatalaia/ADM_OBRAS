@@ -1,0 +1,11 @@
+{
+  "name": "adm_obras",
+  "version": "1.0.0",
+  "description": "![logo-branca](https://github.com/user-attachments/assets/d3e484cd-3716-4205-af2a-38d233b0b0d1)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

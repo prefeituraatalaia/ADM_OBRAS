@@ -1,9 +1,9 @@
 export interface IConstruction {
-  id: number;
+  id?: number;
   name: string;
   description: string;
   startedDate: Date;
-  endedDate: Date;
+  endedDate?: Date;
   status: string;
   techManager: string;
 }

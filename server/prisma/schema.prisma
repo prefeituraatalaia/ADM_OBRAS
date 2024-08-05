@@ -20,7 +20,7 @@ model Construction {
   name        String
   description String
   startedDate DateTime
-  endedDate   DateTime
+  endedDate   DateTime?
   status      String
   techManager String
   progress    Progress[]

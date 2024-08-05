@@ -15,9 +15,9 @@ export class ConstructionService {
 
   async showOneConstruction(data: IConstruction) {
     const construction = await this.prisma.construction.findUnique({
-      where: {
-        id: data.id,
-      },
+     where: {
+      id: data.id,
+     },
     });
     return construction;
   }
@@ -36,5 +36,12 @@ export class ConstructionService {
     return construction;
   }
 
-  async deleteConstruction(data: IConstruction) {}
+  async deleteConstruction(data: IConstruction) {
+    const construction = await this.prisma.construction.delete({
+      where: {
+        id: data.id,
+      },
+    });
+    return construction;
+  }
 }

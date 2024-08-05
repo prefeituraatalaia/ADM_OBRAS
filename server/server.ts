@@ -1,6 +1,5 @@
 import express, { Application } from "express";
-// import { UserController } from "./src/controller/UserController";
-// import { AllRoutes } from "./src/routes/AllRoutes";
+import { AllRoutes } from "./src/routes/allRoutes";
 
 export class Server {
   private app: Application;
@@ -11,12 +10,10 @@ export class Server {
     this.app.use(express.json());
     this.porta = porta;
     console.log(porta);
-  }
 
-  // router() {
-  //   const allRoutes = new AllRoutes();
-  //   this.app.use(allRoutes.getRoutes());
-  // }
+    const allRoutes = new AllRoutes();
+    this.app.use(allRoutes.getRoutes());
+  }
 
   listen() {
     this.app.listen(this.porta, () => {

@@ -10,6 +10,9 @@ export class ConstructionRoute {
   getRoutes() {
     const constructionController = new ConstructionController();
     this.router.get("/", constructionController.show);
+    this.router.post("/", constructionController.create);
+    this.router.get("/show", constructionController.showById);
+    this.router.delete("/delete", constructionController.deleteById);
     return this.router;
   }
 }
